@@ -20,9 +20,9 @@ A modern, responsive financial dashboard built with React, Next.js, TypeScript, 
 - **Styling**: TailwindCSS v4 + Custom Design Tokens
 - **UI Components**: Radix UI primitives with custom styling
 - **Charts**: Recharts for data visualization
-- **State Management**: Zustand
+- **State Management**: React-Redux
 - **Data Fetching**: TanStack React Query + Axios
-- **Icons**: Lucide React
+- **Icons**: Material UI Icons
 
 ## Getting Started
 

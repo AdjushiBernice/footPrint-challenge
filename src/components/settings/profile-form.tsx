@@ -1,13 +1,22 @@
-"use client"
-import React, { useState, useEffect } from "react"
-import { Card, CardContent, Button, Input, TextField, Typography, Avatar, CircularProgress } from "@mui/material"
-import { useAppSelector, useAppDispatch } from "@/lib/store"
-import { updateUserProfile, updateProfileField } from "@/lib/slices/userSlice"
-import { Camera } from "@mui/icons-material" // Material UI Camera Icon
+"use client";
+import React, { useState, useEffect } from "react";
+import {
+  Card,
+  CardContent,
+  Button,
+  Input,
+  TextField,
+  Typography,
+  Avatar,
+  CircularProgress,
+} from "@mui/material";
+import { useAppSelector, useAppDispatch } from "@/lib/store";
+import { updateUserProfile, updateProfileField } from "@/lib/slices/userSlice";
+import { Camera } from "@mui/icons-material"; // Material UI Camera Icon
 
 export function ProfileForm() {
-  const dispatch = useAppDispatch()
-  const { profile, isLoading, error } = useAppSelector((state) => state.user)
+  const dispatch = useAppDispatch();
+  const { profile, isLoading, error } = useAppSelector((state) => state.user);
   const [formData, setFormData] = useState({
     name: "",
     username: "",
@@ -18,7 +27,7 @@ export function ProfileForm() {
     city: "",
     postalCode: "",
     country: "",
-  })
+  });
 
   useEffect(() => {
     if (profile) {
@@ -32,19 +41,21 @@ export function ProfileForm() {
         city: profile.city || "",
         postalCode: profile.postalCode || "",
         country: profile.country || "",
-      })
+      });
     }
-  }, [profile])
+  }, [profile]);
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
-    dispatch(updateProfileField({ field: field as keyof typeof profile, value }))
-  }
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    dispatch(
+      updateProfileField({ field: field as keyof typeof profile, value })
+    );
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    await dispatch(updateUserProfile(formData))
-  }
+    e.preventDefault();
+    await dispatch(updateUserProfile(formData));
+  };
 
   if (!profile) {
     return (
@@ -69,7 +80,7 @@ export function ProfileForm() {
           </div>
         </CardContent>
       </Card>
-    )
+    );
   }
 
   return (
@@ -80,7 +91,11 @@ export function ProfileForm() {
           <div className="flex items-start gap-6">
             <div className="relative">
               <Avatar className="w-20 h-20">
-                <img src={profile.avatar || "/placeholder.svg"} alt={profile.name} className="w-full h-full rounded-full" />
+                <img
+                  src={profile.avatar || "/placeholder.svg"}
+                  alt={profile.name}
+                  className="w-full h-full rounded-full"
+                />
               </Avatar>
               <Button
                 type="button"
@@ -92,8 +107,15 @@ export function ProfileForm() {
               </Button>
             </div>
             <div className="flex-1">
-              <Typography variant="h6" className="font-semibold text-gray-900 mb-1">{profile.name}</Typography>
-              <Typography variant="body2" className="text-gray-600">{profile.email}</Typography>
+              <Typography
+                variant="h6"
+                className="font-semibold text-gray-900 mb-1"
+              >
+                {profile.name}
+              </Typography>
+              <Typography variant="body2" className="text-gray-600">
+                {profile.email}
+              </Typography>
             </div>
           </div>
 
@@ -149,7 +171,9 @@ export function ProfileForm() {
                 label="Date of Birth"
                 id="dateOfBirth"
                 value={formData.dateOfBirth}
-                onChange={(e) => handleInputChange("dateOfBirth", e.target.value)}
+                onChange={(e) =>
+                  handleInputChange("dateOfBirth", e.target.value)
+                }
                 fullWidth
                 variant="outlined"
               />
@@ -160,7 +184,9 @@ export function ProfileForm() {
                 label="Present Address"
                 id="presentAddress"
                 value={formData.presentAddress}
-                onChange={(e) => handleInputChange("presentAddress", e.target.value)}
+                onChange={(e) =>
+                  handleInputChange("presentAddress", e.target.value)
+                }
                 fullWidth
                 variant="outlined"
               />
@@ -171,7 +197,9 @@ export function ProfileForm() {
                 label="Permanent Address"
                 id="permanentAddress"
                 value={formData.permanentAddress}
-                onChange={(e) => handleInputChange("permanentAddress", e.target.value)}
+                onChange={(e) =>
+                  handleInputChange("permanentAddress", e.target.value)
+                }
                 fullWidth
                 variant="outlined"
               />
@@ -193,7 +221,9 @@ export function ProfileForm() {
                 label="Postal Code"
                 id="postalCode"
                 value={formData.postalCode}
-                onChange={(e) => handleInputChange("postalCode", e.target.value)}
+                onChange={(e) =>
+                  handleInputChange("postalCode", e.target.value)
+                }
                 fullWidth
                 variant="outlined"
               />
@@ -214,18 +244,28 @@ export function ProfileForm() {
           {/* Error Message */}
           {error && (
             <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
-              <Typography variant="body2" className="text-sm text-red-600">{error}</Typography>
+              <Typography variant="body2" className="text-sm text-red-600">
+                {error}
+              </Typography>
             </div>
           )}
 
           {/* Save Button */}
           <div className="flex justify-end">
-            <Button type="submit" disabled={isLoading} variant="contained" color="primary">
+            <Button
+              type="submit"
+              disabled={isLoading}
+              variant="contained"
+              style={{
+                backgroundColor: "#232323", // Dark background color
+                color: "#fff", // White text color
+              }}
+            >
               {isLoading ? <CircularProgress size={24} /> : "Save"}
             </Button>
           </div>
         </form>
       </CardContent>
     </Card>
-  )
+  );
 }

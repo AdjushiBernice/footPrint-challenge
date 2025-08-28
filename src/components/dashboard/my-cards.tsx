@@ -17,10 +17,18 @@ export function MyCards({ cards }: MyCardsProps) {
         </Button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {cards.length > 0 ? (
           cards.map((card) => (
-            <Card key={card.id} className="relative overflow-hidden border-0 text-white h-48">
+            <Card
+              key={card.id}
+              style={{
+                backgroundColor: card.isActive
+                  ? "linear-gradient(to right, #5B5A6F, #000000)"
+                  : "transparent", // Active card with gradient, inactive with no background
+              }}
+              className="relative overflow-hidden border-0 text-white h-48"
+            >
               <CardContent className="p-6 h-full flex flex-col justify-between">
                 <div className="flex justify-between items-start">
                   <div>

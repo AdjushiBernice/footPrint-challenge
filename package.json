@@ -5,9 +5,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "next start",
-    "mock-server": "json-server --watch db.json --port 3001"
-  },
+    "start": "json-server --watch db.json --port $PORT"
+     },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
