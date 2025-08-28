@@ -1,0 +1,109 @@
+{
+    "UserProfile": {
+      "id": "1",
+      "name": "Charlene Reed",
+      "username": "charlener",
+      "email": "charlenereed@gmail.com",
+      "avatar": "/professional-woman-avatar.png",
+      "dateOfBirth": "25 January 1990",
+      "presentAddress": "San Jose, California, USA",
+      "permanentAddress": "San Jose, California, USA",
+      "city": "San Jose",
+      "postalCode": "45962",
+      "country": "USA"
+    },
+    "Card": [
+      {
+        "id": "1",
+        "balance": 5756,
+        "cardHolder": "Eddy Cusuma",
+        "validThru": "12/22",
+        "cardNumber": "3778 **** **** 1234",
+        "type": "visa",
+        "isActive": true
+      },
+      {
+        "id": "2",
+        "balance": 5756,
+        "cardHolder": "Edwin Cusuma",
+        "validThru": "12/22",
+        "cardNumber": "3778 **** **** 1234",
+        "type": "mastercard",
+        "isActive": false
+      }
+    ],
+    "Transaction": [
+      {
+        "id": "1",
+        "type": "deposit",
+        "amount": 850,
+        "description": "Deposit from my Card",
+        "date": "28 January 2021",
+                "color": "#00FF00"
+      },
+      {
+        "id": "2",
+        "type": "withdrawal",
+        "amount": -85,
+        "description": "Deposit Paypal",
+        "date": "25 January 2021",
+        "color": "#FF0000"
+      },
+      {
+        "id": "3",
+        "type": "transfer",
+        "amount": 1406,
+        "description": "Jemi Wilson",
+        "date": "21 January 2021",
+        "color": "#0000FF"
+      }
+    ],
+    "WeeklyActivity" : [
+        { "day": "Sat", "deposit": 480, "withdraw": 320 },
+  { "day": "Sun", "deposit": 350, "withdraw": 280 },
+  { "day": "Mon", "deposit": 320, "withdraw": 180 },
+  { "day": "Tue", "deposit": 480, "withdraw": 350 },
+  { "day": "Wed", "deposit": 200, "withdraw": 400 },
+  { "day": "Thu", "deposit": 380, "withdraw": 320 },
+  { "day": "Fri", "deposit": 420, "withdraw": 280 }
+  
+    ],
+    "ExpenseCategory":[
+        { "name": "Entertainment", "percentage": 35, "amount": 500, "color": "#232323" },
+        { "name": "Bill Expense", "percentage": 30, "amount": 200, "color": "#343C6A" },
+        { "name": "Investment", "percentage": 20, "amount": 300, "color": "#396AFF" },
+        { "name": "Others", "percentage": 15, "amount": 400, "color": "#FC7900" }
+     
+    ],
+    "QuickTransferUser": [
+        {
+            "id": "1",
+            "name": "Livia Bator",
+            "role": "CEO",
+            "avatar": "/professional-woman-ceo.png"
+          },
+          {
+            "id": "2",
+            "name": "Randy Press",
+            "role": "Director",
+            "avatar": "/professional-man-director.png"
+          },
+          {
+            "id": "3",
+            "name": "Workman",
+            "role": "Designer",
+            "avatar": "/professional-designer.png"
+          } 
+    ],
+    "BalanceHistoryPoint": [
+        { "month": "Jul", "balance": 200 },
+  { "month": "Aug", "balance": 400 },
+  { "month": "Sep", "balance": 300 },
+  { "month": "Oct", "balance": 700 },
+  { "month": "Nov", "balance": 500 },
+  { "month": "Dec", "balance": 800 },
+  { "month": "Jan", "balance": 750 }
+  
+    ]
+  }
+  
