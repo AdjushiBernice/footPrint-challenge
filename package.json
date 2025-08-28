@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "json-server --watch db.json --static ./public --port $PORT"     },
+    "start": "json-server --watch db.json --static ./public --port $PORT & next start"      },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
