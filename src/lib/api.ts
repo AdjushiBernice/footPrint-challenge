@@ -10,7 +10,9 @@ import type {
 } from "./types";
 
 const api = axios.create({
-  baseURL: "http://localhost:3001", // Change this to point to your local JSON Server
+  baseURL: process.env.NODE_ENV === "production"
+    ? "https://foot-print-api.onrender.com"
+    : "http://localhost:3001",
   timeout: 5000,
 });
 
