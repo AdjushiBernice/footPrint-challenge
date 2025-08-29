@@ -10,9 +10,7 @@ import type {
 } from "./types";
 
 const api = axios.create({
-  baseURL: process.env.NODE_ENV === "production"
-    ? "https://footprint-challenge.onrender.com"
-    : "http://localhost:3001",
+  baseURL: "https://footprint-challenge.onrender.com" || "http://localhost:5000", // local dev
   timeout: 5000,
 });
 

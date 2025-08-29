@@ -88,12 +88,12 @@ export function Sidebar() {
   return (
     <div className="relative">
       {/* Menu Button for mobile screens only */}
-      {/* <Button
+      <Button
         className="lg:hidden absolute top-4 left-4 z-50"
         onClick={handleMenuToggle}
       >
         <MenuIcon className="text-gray-600" />
-      </Button> */}
+      </Button>
 
       {/* Sidebar */}
       <div

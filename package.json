@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "concurrently \"ts-node server.ts\" \"next start -p 10000\""
-    },
+    "start": "concurrently \"ts-node server.ts\" \"next start -p 10000\"",
+    "mock-server": "concurrently \"next dev --turbopack\" \"json-server --watch db.json --port 5000\""
+      },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",

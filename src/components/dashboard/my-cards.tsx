@@ -2,7 +2,9 @@
 
 import { Card, CardContent, Button, CardHeader } from "@mui/material";
 import { Card as CardType } from "@/lib/types"; // Import the Card type
-
+import Image from "next/image";
+import Chip from "../../../public /darkChip.svg"
+import Master from "../../../public /darkMaster.svg"
 interface MyCardsProps {
   cards: CardType[]; // Accept cards as a prop
 }
@@ -35,6 +37,9 @@ export function MyCards({ cards }: MyCardsProps) {
                     <p className="text-sm text-gray-600">Balance</p>
                     <p className="text-2xl font-semibold">${card.balance.toLocaleString()}</p>
                   </div>
+                  <div className="">
+                    <Image src={Chip} alt="chip" />
+                  </div>
                 </div>
 
                 <div className="space-y-4">
@@ -51,6 +56,9 @@ export function MyCards({ cards }: MyCardsProps) {
 
                   <div className="flex justify-between items-center">
                     <p className="text-lg font-mono tracking-wider">{card.cardNumber}</p>
+                    <div className="">
+                      <Image src={Master} alt="master" />
+                    </div>
                   </div>
                 </div>
               </CardContent>

@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { useAppSelector, useAppDispatch } from "@/lib/store";
 import { updateUserProfile, updateProfileField } from "@/lib/slices/userSlice";
-import { Camera } from "@mui/icons-material"; // Material UI Camera Icon
+import { Camera, Edit } from "@mui/icons-material"; // Material UI Camera Icon
 import ProfilePicture from "../../../public /christina.png";
 import Image from "next/image";
 
@@ -99,14 +99,14 @@ export function ProfileForm() {
                   className="w-full h-full rounded-full"
                 />
               </Avatar>
-              <Button
+              {/* <Button
                 type="button"
                 size="small"
                 variant="outlined"
                 className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full p-0 bg-transparent"
               >
-                <Camera className="w-4 h-4" />
-              </Button>
+                <Edit className="w-4 h-4" />
+              </Button> */}
             </div>
             <div className="flex-1">
               <Typography
