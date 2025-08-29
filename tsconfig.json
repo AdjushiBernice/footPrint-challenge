@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "es2020",  // ES2020 is a good target for modern Node.js
+    "module": "CommonJS",  // Use CommonJS for Node.js compatibility
     "lib": [
       "dom",
       "dom.iterable",
@@ -11,7 +12,6 @@
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -33,9 +33,10 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "server.ts"
+    "server.ts"  // Include the server.ts file here
   ],
   "exclude": [
-    "node_modules", "Procfile"
+    "node_modules", 
+    "Procfile"
   ]
 }
