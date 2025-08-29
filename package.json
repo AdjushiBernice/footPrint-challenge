@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "concurrently \"json-server --watch db.json --port 10001\" \"next start\""
-  },
+    "start": "concurrently \"json-server --watch db.json --port $PORT\" \"next start\""
+    },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
