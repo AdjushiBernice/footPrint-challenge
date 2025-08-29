@@ -77,9 +77,9 @@ export const fetchDashboardData = createAsyncThunk("dashboard/fetchData", async 
       { name: "Others", percentage: 35, amount: 1750, color: "#d62728" },
     ] as ExpenseCategory[],
     quickTransferUsers: [
-      { id: "1", name: "Livia Bator", role: "CEO", avatar: "/placeholder.svg?height=40&width=40" },
-      { id: "2", name: "Randy Press", role: "Director", avatar: "/placeholder.svg?height=40&width=40" },
-      { id: "3", name: "Workman", role: "Designer", avatar: "/placeholder.svg?height=40&width=40" },
+      { id: "1", name: "Livia Bator", role: "CEO" },
+      { id: "2", name: "Randy Press", role: "Director" },
+      { id: "3", name: "Workman", role: "Designer" },
     ] as QuickTransferUser[],
     balanceHistory: [
       { month: "Jul", balance: 200 },

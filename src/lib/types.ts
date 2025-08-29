@@ -34,7 +34,6 @@ export interface Card {
     id: string
     name: string
     role: string
-    avatar: string
   }
   
   export interface BalanceHistoryPoint {
@@ -53,7 +52,6 @@ export interface Card {
     city: string
     postalCode: string
     country: string
-    avatar: string
   }
   
   export interface DashboardState {

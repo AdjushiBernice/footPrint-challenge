@@ -16,7 +16,6 @@ export const fetchUserProfile = createAsyncThunk("user/fetchProfile", async () =
     city: "San Jose",
     postalCode: "45962",
     country: "USA",
-    avatar: "/placeholder.svg?height=80&width=80",
   } as UserProfile
 })
 

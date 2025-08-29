@@ -13,6 +13,8 @@ import {
 import { useAppSelector, useAppDispatch } from "@/lib/store";
 import { updateUserProfile, updateProfileField } from "@/lib/slices/userSlice";
 import { Camera } from "@mui/icons-material"; // Material UI Camera Icon
+import ProfilePicture from "../../../public /christina.png";
+import Image from "next/image";
 
 export function ProfileForm() {
   const dispatch = useAppDispatch();
@@ -91,8 +93,8 @@ export function ProfileForm() {
           <div className="flex items-start gap-6">
             <div className="relative">
               <Avatar className="w-20 h-20">
-                <img
-                  src={profile.avatar || "/placeholder.svg"}
+                <Image
+                  src={ProfilePicture}
                   alt={profile.name}
                   className="w-full h-full rounded-full"
                 />

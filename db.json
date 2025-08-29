@@ -4,7 +4,6 @@
       "name": "Charlene Reed",
       "username": "charlener",
       "email": "charlenereed@gmail.com",
-      "avatar": "/professional-woman-avatar.png",
       "dateOfBirth": "25 January 1990",
       "presentAddress": "San Jose, California, USA",
       "permanentAddress": "San Jose, California, USA",
@@ -79,20 +78,17 @@
         {
             "id": "1",
             "name": "Livia Bator",
-            "role": "CEO",
-            "avatar": "/professional-woman-ceo.png"
+            "role": "CEO"
           },
           {
             "id": "2",
             "name": "Randy Press",
-            "role": "Director",
-            "avatar": "/professional-man-director.png"
+            "role": "Director"
           },
           {
             "id": "3",
             "name": "Workman",
-            "role": "Designer",
-            "avatar": "/professional-designer.png"
+            "role": "Designer"
           } 
     ],
     "BalanceHistoryPoint": [
