@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "concurrently \"json-server --watch db.json --port $PORT\" \"next start -p $PORT\""
-      },
+    "start": "concurrently \"ts-node server.ts\" \"next start\""
+    },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
@@ -28,6 +28,8 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/cors": "^2.8.19",
+    "@types/json-server": "^0.14.8",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
