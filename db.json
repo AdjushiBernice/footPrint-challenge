@@ -38,7 +38,7 @@
         "amount": 850,
         "description": "Deposit from my Card",
         "date": "28 January 2021",
-                "color": "#00FF00"
+        "color": "#00FF00"
       },
       {
         "id": "2",
@@ -58,7 +58,7 @@
       }
     ],
     "WeeklyActivity" : [
-        { "day": "Sat", "deposit": 480, "withdraw": 320 },
+  { "day": "Sat", "deposit": 480, "withdraw": 320 },
   { "day": "Sun", "deposit": 350, "withdraw": 280 },
   { "day": "Mon", "deposit": 320, "withdraw": 180 },
   { "day": "Tue", "deposit": 480, "withdraw": 350 },
@@ -92,7 +92,7 @@
           } 
     ],
     "BalanceHistoryPoint": [
-        { "month": "Jul", "balance": 200 },
+  { "month": "Jul", "balance": 200 },
   { "month": "Aug", "balance": 400 },
   { "month": "Sep", "balance": 300 },
   { "month": "Oct", "balance": 700 },
